@@ -1,0 +1,55 @@
+.hero {
+  background: var(---primary-gray);
+  height: 50vh;
+  width: 60vw;
+  border-radius: 2rem;
+  display: flex;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    color: var(---primary-black);
+    gap: .75rem;
+}
+
+.input .in {
+    padding: 1rem;
+    height: .75rem;
+    border: 1px solid var(---primary-blue);
+    border-radius: .5rem;
+} */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: .75rem;
+    padding: 1rem;
+    border: 1px solid var(---primary-white);
+    border-radius: .5rem;
+    background-color: var(---primary-blue);
+    cursor: pointer;
+    color: var(---primary-white);
+    font-weight: 600;
+    animation-duration: 150ms;
+}
+
+.btn:hover {
+    animation: bounce-btn 300ms forwards;
+}
+
+@keyframes bounce-btn {
+    95% {
+        transform: scale(104%);
+    }
+    100% {
+        transform: scale(103%);
+    }
+}

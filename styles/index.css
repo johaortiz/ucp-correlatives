@@ -1,0 +1,62 @@
+@import './navbar.css';
+@import './home.css';
+@import './login.css';
+
+:root {
+  ---primary-white: #f9fbfc;
+  ---primaty-black: #14181c;
+  ---primary-blue: #2095f4;
+  ---primary-gray: #e7edf4;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul,
+li,
+a,
+button,
+div
+span {
+  all: unset;
+}
+
+html {
+  background-color: var(---primary-white);
+  color: var(---primaty-black);
+  font-family: "Manrope", sans-serif;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: .25rem 2rem;
+}
+
+[class*="["] {
+  display: flex;
+}
+
+#inner-sections {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
