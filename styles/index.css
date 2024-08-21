@@ -1,14 +1,17 @@
-@import './navbar.css';
-@import './home.css';
-@import './login.css';
+@import "./navbar.css";
+@import "./home.css";
+@import "./login.css";
 
+/* Variables CSS */
 :root {
-  ---primary-white: #f9fbfc;
-  ---primaty-black: #14181c;
-  ---primary-blue: #2095f4;
-  ---primary-gray: #e7edf4;
+  --primary-white: #f8fafc;
+  --primary-black: #14181c;
+  --primary-sky-blue: #2094f3;
+  --primary-blue-gray: #49779c;
+  --primary-gray: #e7eef4;
 }
 
+/* Fuente personalizada */
 @font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-VariableFont_wght.ttf") format("truetype");
@@ -16,26 +19,35 @@
   font-weight: normal;
 }
 
+/* Reset de estilos */
 ul,
 li,
 a,
 button,
-div
-span {
+div span {
   all: unset;
 }
 
-html {
-  background-color: var(---primary-white);
-  color: var(---primaty-black);
+/* Estilos globales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-white);
+  color: var(--primary-black);
   font-family: "Manrope", sans-serif;
-  height: 100vh;
+}
+
+a {
+  cursor: pointer;
 }
 
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Contenedores flexibles */
 .flex-container {
   display: flex;
   justify-content: center;
@@ -47,16 +59,52 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  padding: .25rem 2rem;
+  padding: 0.25rem 2rem;
 }
 
 [class*="["] {
   display: flex;
 }
 
+/* Sección interna */
 #inner-sections {
-  height: 100%;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Navbar */
+#navbar {
+  border-bottom: 0.15rem solid;
+  border-bottom-color: var(--primary-gray);
+}
+
+/* Botón */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--primary-white);
+  border-radius: 0.5rem;
+  background-color: var(--primary-blue);
+  cursor: pointer;
+  color: var(--primary-white);
+  font-weight: 600;
+  animation-duration: 150ms;
+}
+
+.btn:hover {
+  animation: bounce-btn 300ms forwards;
+}
+
+@keyframes bounce-btn {
+  95% {
+    transform: scale(104%);
+  }
+  100% {
+    transform: scale(103%);
+  }
 }

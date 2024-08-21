@@ -1,9 +1,38 @@
-<article class="home-container">
-    <div class="hero">
-        <h1>Bienenido al control de Correlativas UCP</h1>
-        <label class="input" for="dni">
-            <input autocomplete="off" id="dni" class="in" type="text" placeholder="Ingrese su DNI">
-            <button class="btn" type="submit">Iniciar Sesión</button>
-        </label>
-    </div>
-</article>
+<section class="home-container">
+  <div class="hero">
+    <h1>UCP-Correlativas</h1>
+    <h4>
+      Un sistema de gestión de materias correlativas para la Universidad de la
+      Cuenca del Plata
+    </h4>
+    <form class="input-form">
+      <div class="input-group">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20px"
+          height="20px"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+        >
+          <path
+            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+          ></path>
+        </svg>
+        <input
+          autocomplete="off"
+          id="dni"
+          class="input-field"
+          type="text"
+          placeholder="Ingrese su DNI"
+        />
+        <button class="btn-submit" type="submit" onclick="router(event)">
+          Iniciar Sesión
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <a href="/about" onclick="route(event)">¿Qué es UCP-Correlatives?</a>
+  </footer>
+</section>
