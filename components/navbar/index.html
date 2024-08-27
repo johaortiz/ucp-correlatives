@@ -8,23 +8,34 @@
     </svg>
     <a href="/" onclick="route(event)"> UCP-Correlatives </a>
   </div>
-  <div class="popover-container">
-    <button class="trigger-button">Menú</button>
-    <div class="popover">
-      <ul>
-        <li><a href="/login" onclick="route(event)">Iniciar Sesión</a></li>
-        <li><a href="/register" onclick="route(event)">Registrarse</a></li>
-        <li><a href="/" onclick="route(event)">Cerrar Sesión</a></li>
-      </ul>
+  
+  <div class="actions">
+    <div class="popover-container">
+      <button class="trigger-button" aria-expanded="false" aria-controls="menu-popover">Menú</button>
+      <div class="popover" id="menu-popover" role="menu">
+        <ul>
+          <li><a href="/login" onclick="route(event)">Iniciar Sesión</a></li>
+          <li><a href="/register" onclick="route(event)">Registrarse</a></li>
+          <li><a href="/" onclick="route(event)">Cerrar Sesión</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="profile-button-container">
-      <button class="profile-button">
+    
+    <div class="profile-popover-container">
+      <button class="profile-button" aria-expanded="false" aria-controls="profile-popover">
         <img
           id="profile-photo"
           src="https://cdn.usegalileo.ai/sdxl10/d7507dd8-8264-4531-86c1-5e8f494d0134.png"
           alt="Foto de perfil"
         />
       </button>
+      <div class="popover" id="profile-popover" role="menu">
+        <ul>
+          <li><a href="/profile" onclick="route(event)">Perfil</a></li>
+          <li><a href="/settings" onclick="route(event)">Configuración</a></li>
+          <li><a href="/" onclick="route(event)">Cerrar Sesión</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>
