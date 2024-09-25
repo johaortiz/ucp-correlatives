@@ -1,6 +1,7 @@
 @import "./navbar.css";
 @import "./home.css";
 @import "./login.css";
+@import "./subjects.css";
 
 /* Variables CSS */
 :root {
@@ -43,8 +44,8 @@ a {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
 /* Contenedores flexibles */
@@ -68,10 +69,10 @@ body {
 
 /* Sección interna */
 #inner-sections {
-  flex: 1;
-  display: flex;
+  /* flex: 1; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 /* Navbar */

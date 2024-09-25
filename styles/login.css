@@ -72,6 +72,8 @@ input:focus {
   font-weight: bold;
   border-radius: 0.75rem;
   cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
 }
 
 .login-button:hover {

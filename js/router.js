@@ -1,37 +1,14 @@
-const route = (event) => {
-  event.preventDefault();
-  window.history.pushState({}, "", event.target.href);
-  handleLocation();
-};
+document
+  .getElementById("dni-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-const routes = {
-  404: "/pages/404",
-  "/": "/pages/home",
-  "/login": "/pages/login",
-  "/register": "/pages/register",
-};
+    const dni = document.getElementById("dni").value;
 
-const loadNavbar = async () => {
-  const navbarHtml = await fetch("../components/navbar").then((data) =>
-    data.text()
-  );
-  document.getElementById("navbar").innerHTML = navbarHtml;
-};
-
-const handleLocation = async () => {
-  const path = window.location.pathname;
-  const route = routes[path] || routes[404];
-  const html = await fetch(route).then((data) => data.text());
-  document.getElementById("inner-sections").innerHTML = html;
-  if (path !== "/login" || path !== "/register") {
-    loadNavbar();
-  }
-};
-
-window.onpopstate = handleLocation;
-window.route = route;
-
-if (window.location.pathname !== "/login" && window.location.pathname !== "/register") {
-    loadNavbar();
-}
-handleLocation();
+    if (dni) {
+      localStorage.setItem("dni", dni);
+      window.location.href = "/pages/login/index.html";
+    } else {
+      alert("Por favor, ingrese un DNI válido.");
+    }
+  });

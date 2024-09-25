@@ -8,9 +8,8 @@
 
 .logotype {
   display: flex;
-  align-items: center;
-  gap: 1rem;
   font-weight: bold;
+  gap: .2rem;
   color: #0d151c;
 }
 
